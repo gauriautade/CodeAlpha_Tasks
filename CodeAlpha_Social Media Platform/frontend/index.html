@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Socially – Login</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="auth-container">
+  <div class="auth-card">
+    <h1>🌸 Socially</h1>
+    <p>Connect. Share. Feel Social.</p>
+
+    <input id="email" placeholder="Email">
+    <input id="password" type="password" placeholder="Password">
+
+    <button onclick="login()">Login</button>
+    <p onclick="goRegister()" style="cursor:pointer;">Create Account</p>
+  </div>
+</div>
+
+<script src="js/auth.js"></script>
+<script>
+  if (localStorage.getItem("user")) {
+    location.href = "feed.html";
+  }
+
+  function goRegister() {
+    location.href = "register.html";
+  }
+</script>
+
+</body>
+</html>

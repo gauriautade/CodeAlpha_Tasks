@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Place Order | Happy Cart</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/order.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <h2>Happy Cart</h2>
+  </nav>
+
+  <!-- ORDER CONTAINER -->
+  <div class="order-container">
+
+    <!-- LEFT: FORM -->
+    <div class="order-form">
+      <h3>Delivery Details</h3>
+
+      <input type="text" id="address" placeholder="Enter full address">
+      <input type="text" id="phone" placeholder="Enter phone number">
+
+      <h4>Payment Method</h4>
+      <select id="payment">
+        <option value="COD">Cash on Delivery</option>
+        <option value="UPI">UPI</option>
+        <option value="Card">Debit / Credit Card</option>
+      </select>
+
+      <button onclick="placeOrder()">Place Order</button>
+    </div>
+
+    <!-- RIGHT: SUMMARY -->
+    <div class="order-summary">
+      <h3>Order Summary</h3>
+      <div id="summary-items"></div>
+      <h4>Total: <span id="total">₹0</span></h4>
+    </div>
+
+  </div>
+
+  <!-- ✅ ONLY SCRIPT TAGS GO HERE -->
+  <script src="js/order.js"></script>
+
+</body>
+</html>

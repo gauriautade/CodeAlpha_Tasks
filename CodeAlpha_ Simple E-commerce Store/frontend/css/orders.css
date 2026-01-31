@@ -1,0 +1,121 @@
+/* =========================
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* =========================
+   BACKGROUND
+========================= */
+body {
+  min-height: 100vh;
+
+  background:
+    linear-gradient(
+      rgba(255,255,255,0.35),
+      rgba(255,255,255,0.35)
+    ),
+    url("../images/orders-bg.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  color: white;
+  padding: 16px 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* =========================
+   ORDERS CONTAINER
+========================= */
+.orders-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 30px;
+}
+
+.orders-container h1 {
+  margin-bottom: 25px;
+  color: #222;
+}
+
+/* =========================
+   ORDER CARD
+========================= */
+.order-card {
+  background: rgba(255,255,255,0.92);
+  border-radius: 18px;
+  padding: 22px;
+  margin-bottom: 25px;
+
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.order-products {
+  border-top: 1px solid #eee;
+  padding-top: 12px;
+}
+
+.order-product {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.order-total {
+  text-align: right;
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #2ecc71;
+}
+
+/* =========================
+   EMPTY STATE
+========================= */
+.empty {
+  background: rgba(255,255,255,0.9);
+  padding: 40px;
+  text-align: center;
+  border-radius: 18px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  color: #777;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 700px) {
+  .order-header {
+    flex-direction: column;
+    gap: 6px;
+  }
+}

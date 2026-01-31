@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Profile · Socially</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="profile-page">
+
+
+<div class="navbar">
+  <div class="nav-left" onclick="location.href='feed.html'" style="cursor:pointer;">
+  ← <strong>Socially</strong>
+</div>
+
+
+  <div class="nav-center"></div>
+
+  <div class="nav-right">
+    <img id="nav-pic" class="nav-avatar" onclick="openMyProfile()">
+    <button onclick="logout()">Logout</button>
+  </div>
+</div>
+
+<div class="profile-container">
+  <div class="profile-card">
+
+   <img id="profile-pic" class="profile-avatar">
+
+<input type="file" id="uploadPic" accept="image/*">
+<button id="uploadBtn" onclick="uploadPic()">Upload</button>
+
+    <h2 id="profile-username"></h2>
+    <p id="profile-bio"></p>
+
+    <!-- OWNER ONLY -->
+    <input id="edit-username" placeholder="Username">
+    <textarea id="edit-bio" placeholder="Bio"></textarea>
+    <button id="saveProfileBtn" onclick="saveProfile()">Save Profile</button>
+
+    <div class="profile-stats">
+      <div onclick="openFollowers()" style="cursor:pointer;">
+        <strong id="followers-count">0</strong>
+        <span>Followers</span>
+      </div>
+      <div onclick="openFollowing()" style="cursor:pointer;">
+        <strong id="following-count">0</strong>
+        <span>Following</span>
+      </div>
+    </div>
+
+    <button id="followBtn" onclick="toggleFollow()"></button>
+
+  </div>
+</div>
+
+<div class="profile-posts">
+  <h3>Posts</h3>
+  <div id="user-posts" class="profile-grid"></div>
+</div>
+
+<script src="js/profile.js"></script>
+</body>
+</html>

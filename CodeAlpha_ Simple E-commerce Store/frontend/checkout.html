@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout | Happy Cart</title>
+  <link rel="stylesheet" href="css/checkout.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <h1>Happy Cart</h1>
+</nav>
+
+<div class="checkout-container">
+
+  <!-- LEFT -->
+  <div class="checkout-form">
+    <h2>Delivery Details</h2>
+
+    <input type="text" id="address" placeholder="Full Address">
+    <input type="text" id="phone" placeholder="Phone Number">
+
+    <h3>Payment Method</h3>
+    <select id="payment">
+      <option value="COD">Cash on Delivery</option>
+      <option value="UPI">UPI</option>
+      <option value="Card">Debit / Credit Card</option>
+    </select>
+
+    <button onclick="placeOrder()">Place Order</button>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="order-summary">
+    <h2>Order Summary</h2>
+    <div id="summary-items"></div>
+    <h3>Total: <span id="total">₹0</span></h3>
+  </div>
+
+</div>
+
+<script src="js/checkout.js"></script>
+</body>
+</html>

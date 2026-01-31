@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Socially – Feed</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="navbar">
+  <div class="nav-left" onclick="location.href='feed.html'" style="cursor:pointer;">
+  🌸 <strong>Socially</strong>
+</div>
+
+
+  <div class="nav-center">
+    <input
+      id="navSearch"
+      placeholder="Search users..."
+      onkeyup="searchUsers()"
+    >
+    <div id="navResults" class="nav-search-results"></div>
+  </div>
+
+  <div class="nav-right">
+    <img id="navPic" class="nav-avatar" onclick="openMyProfile()">
+    <button onclick="logout()">Logout</button>
+    <button onclick="location.href='upload.html'">➕ Story</button>
+
+  </div>
+</div>
+
+<div class="main">
+
+  <div class="sidebar">
+    <img id="sidePic" class="avatar" onclick="openMyProfile()" style="cursor:pointer;">
+    <h3 id="username" onclick="openMyProfile()" style="cursor:pointer;"></h3>
+    <p>Sharing my thoughts ✨</p>
+  </div>
+
+  <div class="feed">
+
+    <!-- STORIES -->
+<div class="stories" id="stories"></div>
+
+
+  <!-- CREATE POST -->
+  <div class="create-post">
+    <textarea id="content" rows="3" placeholder="What’s on your mind? 💭"></textarea>
+
+    <input type="file" id="postImage" accept="image/*">
+
+    <button onclick="createPost()">Post</button>
+  </div>
+
+  <!-- POSTS CONTAINER (THIS WAS MISSING ❗) -->
+  <div id="posts"></div>
+
+</div>
+
+</div>
+
+<script src="js/feed.js"></script>
+
+<script>
+  const u = JSON.parse(localStorage.getItem("user"));
+  document.getElementById("username").innerText = u.username;
+
+  document.getElementById("navPic").src =
+  document.getElementById("sidePic").src =
+    u.profilePic
+      ? `http://localhost:5000/uploads/${u.profilePic}`
+      : "https://via.placeholder.com/80";
+
+  function openMyProfile() {
+    location.href = `profile.html?id=${u._id}`;
+  }
+</script>
+
+</body>
+</html>

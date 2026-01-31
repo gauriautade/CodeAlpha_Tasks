@@ -1,0 +1,53 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6fb;
+}
+
+.navbar {
+  background: #667eea;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.details-card {
+  max-width: 900px;
+  margin: 50px auto;
+  display: flex;
+  gap: 40px;
+  background: white;
+  padding: 30px;
+  border-radius: 14px;
+}
+
+.details-card img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.info h1 {
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+button {
+  padding: 12px 20px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}

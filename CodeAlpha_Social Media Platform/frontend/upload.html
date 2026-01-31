@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Story</title>
+</head>
+<body>
+
+<input type="file" id="file" accept="image/*">
+<button onclick="uploadStory()">Upload Story</button>
+
+<script>
+const user = JSON.parse(localStorage.getItem("user"));
+
+async function uploadStory() {
+  const f = document.getElementById("file").files[0];
+  if (!f) return alert("Select image");
+
+  const fd = new FormData();
+  fd.append("image", f);
+  fd.append("userId", user._id);
+
+  await fetch("http://localhost:5000/api/story", {
+    method: "POST",
+    body: fd
+  });
+
+  alert("Story uploaded!");
+  location.href = "feed.html";
+}
+</script>
+
+</body>
+</html>
